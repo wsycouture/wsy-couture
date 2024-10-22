@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WSY COUTURE - Home</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="images/WSY Brand Logo.png" alt="WSY COUTURE Logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="products_services.html">Products & Services</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="signup.html">Sign Up</a></li>
+                <li><a href="newsletter.html">Newsletter</a></li>
+            </ul>
+            <div class="search-bar">
+                <input type="text" placeholder="Search...">
+                <button type="submit">Search</button>
+            </div>
+            <div class="shopping-cart">
+                <a href="cart.html">Cart (0)</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Auto-playing commercial video -->
+        <section class="video-section">
+            <video autoplay muted controls poster="video-thumbnail.jpg" style="width: 100%; height: auto;">
+                <source src="images/commercial wsy.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </section>
+
+        <!-- Hero section with the large banner -->
+        <section class="hero">
+            <div class="hero-image">
+                <img src="images/Welcome.png" alt="WSY COUTURE Clothing Collection">
+            </div>
+            <div class="hero-content">
+                <h1>COUTURE</h1>
+                <p></p>
+            </div>
+        </section>
+
+        <!-- Scrollable section with clickable category images -->
+        <section class="categories-section">
+            <div class="category">
+                <a href="products_services.html#eco-apparel">
+                    <img src="images/tote bag.jpg" alt="Eco-Friendly Apparel">
+                    <h2>Eco-Friendly Apparel</h2>
+                </a>
+            </div>
+            <div class="category">
+                <a href="products_services.html#recycled-accessories">
+                    <img src="images/Reveal Your Facets - Swarovski Jewelry - Blue.jpeg" alt="Recycled Accessories">
+                    <h2>Recycled Accessories</h2>
+                </a>
+            </div>
+        </section>
+
+        <!-- Articles Section -->
+        <section class="articles-section">
+            <h2>Our Story & Values</h2>
+            <article>
+                <h3>The WSY COUTURE Journey</h3>
+                <p>WSY COUTURE was founded with the vision of creating a sustainable future through fashion. Our commitment to the environment is at the core of everything we do.</p>
+            </article>
+            <article>
+                <h3>Our Values</h3>
+                <p>We believe in innovation, quality, and responsibility. These values guide us in crafting high-fashion products that not only look great but also contribute to a greener planet.</p>
+            </article>
+        </section>
+
+        <!-- AI Assistant Section -->
+        <section class="ai-assistant">
+            <div class="assistant-icon" onclick="toggleChat()">
+                <img src="images/icon_n1-removebg-preview.png" alt="AI Assistant" />
+            </div>
+            <div class="chat-box" id="chatBox">
+                <div class="chat-header">
+                    <h3>Styling Tips with WSY Assistant</h3>
+                    <button onclick="toggleChat()">X</button>
+                </div>
+                <div class="chat-content">
+                    <div id="chatMessages">
+                        <p>Hi! I'm your WSY COUTURE styling assistant. How can I help you today?</p>
+                    </div>
+                </div>
+                <div class="chat-input">
+                    <input type="text" id="userInput" placeholder="Ask me anything about fashion..." />
+                    <button onclick="sendMessage()">Send</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Example of Product Button -->
+    <button onclick="addToCart('Organic Cotton T-Shirt', 25.00)">Add to Cart</button>
+    <button onclick="addToCart('Taline Dress', 85.00)">Add to Cart</button>
+
+    <footer>
+        <div class="newsletter-signup">
+            <h2>Subscribe to Our Newsletter</h2>
+            <form action="subscribe.html">
+                <input type="email" placeholder="Enter your email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+        <p>&copy; 2024 WSY COUTURE. All Rights Reserved.</p>
+        <div id="dates">
+            <p>Last Modified: <span id="lastModifiedDate"></span></p>
+            <p>Current Date: <span id="currentDate"></span></p>
+        </div>
+    </footer>
+
+    <script src="chatbot.js"></script>
+    <script>
+        // Set last modified date
+        document.getElementById('lastModifiedDate').textContent = document.lastModified;
+
+        // Set current date
+        const currentDate = new Date().toLocaleDateString();
+        document.getElementById('currentDate').textContent = currentDate;
+    </script>
+</body>
+</html>

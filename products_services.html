@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WSY COUTURE - Products & Services</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="images/WSY Brand Logo.png" alt="WSY COUTURE Logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="products_services.html">Products & Services</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="signup.html">Sign Up</a></li>
+            </ul>
+            <div class="shopping-cart">
+                <a href="cart.html">Cart (0)</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="product-section">
+            <h1>Our Products & Services</h1>
+            <p>Explore our wide range of sustainable fashion products, from eco-friendly apparel to recycled accessories and sustainable packaging solutions.</p>
+
+            <!-- Eco-Friendly Apparel Section -->
+            <div id="eco-apparel" class="product-category">
+                <h2>Eco-Friendly Apparel</h2>
+                <div class="product-list">
+                    <div class="product-item">
+                        <img src="images/The Skull Tee_ _ Graphic _ T-shirt _ Print _ Trendy _ Y2K _ Pop culture _ Statement _ Limited edition _ Urban _ Unisex _.jpeg" alt="Organic Cotton T-Shirt">
+                        <h3>Organic Cotton T-Shirt</h3>
+                        <p>$25.00</p>
+                        <button onclick="addToCart('Organic Cotton T-Shirt')">Add to Cart</button>
+                    </div>
+                    <div class="product-item">
+                        <img src="images/Taline Gold Lurex Maxi Dress.jpeg" alt="Taline Dress">
+                        <h3>Taline Dress</h3>
+                        <p>$85.00</p>
+                        <button onclick="addToCart('Taline Dress')">Add to Cart</button>
+                    </div>
+                    <!-- Additional products can be added here -->
+                </div>
+            </div>
+
+            <!-- Recycled Accessories Section -->
+            <div id="recycled-accessories" class="product-category">
+                <h2>Recycled Accessories</h2>
+                <div class="product-list">
+                    <div class="product-item">
+                        <img src="images/Prada Y2K Black Star Sunglasses Dupe, Aesthetic Sunglasses, Y2K Wishlist, Prada Dupe.jpeg" alt="Recycled Plastic Sunglasses">
+                        <h3>Recycled Plastic Sunglasses</h3>
+                        <p>$35.00</p>
+                        <button onclick="addToCart('Recycled Plastic Sunglasses')">Add to Cart</button>
+                    </div>
+                    <div class="product-item">
+                        <img src="images/Triple-layer retro style pearl star necklace.jpeg" alt="Upcycled Pearl Star Necklace">
+                        <h3>Upcycled Pearl Star Necklace</h3>
+                        <p>$50.00</p>
+                        <button onclick="addToCart('Upcycled Pearl Star Necklace')">Add to Cart</button>
+                    </div>
+                    <!-- Additional products can be added here -->
+                </div>
+            </div>
+
+            <!-- Sustainable Packaging Section -->
+            <div id="sustainable-packaging" class="product-category">
+                <h2>Sustainable Packaging</h2>
+                <div class="product-list">
+                    <div class="product-item">
+                        <img src="images/Handmade Paper Gift Bag - Small.jpeg" alt="Biodegradable Packaging Box">
+                        <h3>Biodegradable Packaging Box</h3>
+                        <p>$10.00</p>
+                        <button onclick="addToCart('Biodegradable Packaging Box')">Add to Cart</button>
+                    </div>
+                    <div class="product-item">
+                        <img src="images/Handmade Paper Gift Bag - Small.jpeg" alt="Recyclable Paper Bags">
+                        <h3>Recyclable Paper Bags</h3>
+                        <p>$5.00</p>
+                        <button onclick="addToCart('Recyclable Paper Bags')">Add to Cart</button>
+                    </div>
+                    <!-- Additional products can be added here -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="newsletter-signup">
+            <h2>Subscribe to Our Newsletter</h2>
+            <form action="subscribe.html">
+                <input type="email" placeholder="Enter your email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+        <p>&copy; 2024 WSY COUTURE. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // JavaScript function to add products to the cart
+        function addToCart(productName) {
+            alert(productName + ' has been added to your cart!');
+            // Logic for updating the cart count and other functionalities can be added here
+        }
+    </script>
+</body>
+</html>
